@@ -36,7 +36,7 @@ intel_binary = 'syscfg'
 bios_settings_dir = os.path.expanduser('~/bios_settings/')
 
 # Links for gathering Golden Template data from Jarvis
-jarvis_bios_settings = 'http://jarvis.siliconmechanics.com/production_automation/SUM_BIOS_configs/'
+jarvis_bios_settings = 'http://jarvis.wpanderson.com/production_automation/SUM_BIOS_configs/'
 
 # Color codes for text formatting.
 RED = '\033[31m'
@@ -262,11 +262,11 @@ class Bios:
         up_dict = {'directory_name': '{0}'.format(self.system_info.p_number + '_' + self.system_info.customer),
                    'file_name':gt_name, 'contents':content}
 
-        jarvis_directory = 'http://jarvis.siliconmechanics.com/production_automation/SUM_BIOS_configs/{0}/{1}'.format(
+        jarvis_directory = 'http://jarvis.wpanderson.com/production_automation/SUM_BIOS_configs/{0}/{1}'.format(
             up_dict['directory_name'], up_dict['file_name'])
 
         try:
-            r = requests.post('http://jarvis.siliconmechanics.com/production_automation/test_bios_settings_writer.py',
+            r = requests.post('http://jarvis.wpanderson.com/production_automation/test_bios_settings_writer.py',
                               up_dict)
             print(GREEN + 'Success! {0} was uploaded to Jarvis as {1}.'.format(gt_name, jarvis_directory) + END)
         except requests.RequestException as e:

@@ -4,7 +4,7 @@ __author__ = 'wpanderson'
 
 """
 CGI script which takes a 'directory_name', 'file_name', and 'contents' as input, then creates project directories and 
-files within those directories which contain system bios settings.
+files within those directories which contain system bios settings. Useful as a template for writing an appache CGI file.
 
 For error output see /var/log/httpd/error_log
 """

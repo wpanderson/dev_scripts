@@ -1,5 +1,5 @@
 #!/usr/bin/python
-__author__ = 'Weston Anderson'
+__author__ = 'wpanderson'
 version = '1.1.1'
 
 """
@@ -62,14 +62,13 @@ class Baseboard(Enum):
 
 class SystemInfo:
     """
-    Class for storing system information gathered from the various utilities in automation.
+    Class for storing system information.
     """
 
     def __init__(self):
         """
-        Initialize important system variables for storing system information. The majority of these variables are used
-        for stamping the Golden_Template when that is uploaded... Information is gathered as part of the:
-        gather_system_info() function as program starts.
+        Initialize important system variables for storing system information. Used as header info.
+        Information is gathered as part of the gather_system_info() function as program starts.
 
         :param p_number:     Project number associated with the system. (Used in file naming)
         :param sm_number:    Used as a serial number for the system
